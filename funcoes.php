@@ -58,8 +58,35 @@
         }
     }
 
+    function exercicio($num1){
+        return ($num1 - 1);
+    }
 
+ 
+    function exercicio7($tBrancos, $tValidos, $tNulos, $tEleitores){
+       if (($tBrancos + $tValidos + $tNulos) == $tEleitores){
+       $pbrancos = porcentagem($tBrancos,$tEleitores);
+       $pValidos = porcentagem($tValidos,$tEleitores);
+       $pNulos   = porcentagem($tNulos,$tEleitores); 
+        return " Votos brancos: $pBrancos%\n
+                 Votos validos: $pValidos%\n
+                 Votos nulos: $pNulos%\n";
+        
+       }else{
+        return "Total de Eleitores é difernte";
+       }
+    }    
 
+    function porcentagem($total,$eleitores){
+        return ($total * 100)/$eleitores;
+    }
 
+    function exercicio8($salario, $porcento){
+       $salariofinal = $salario * ($porcento/100) +$salario;
+       return "Seu salário é $salariofinal"; 
+        
+    }
 
 ?>
+
+
